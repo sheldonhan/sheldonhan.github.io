@@ -83,7 +83,24 @@
         </span></div>
     </header>
 
-    <div class="post-content"><h1 id="如何设计高性能架构？"><a href="#如何设计高性能架构？" class="headerlink" title="如何设计高性能架构？"></a>如何设计高性能架构？</h1>
+    <div class="post-content"><h1 id="如何设计高性能架构？"><a href="#如何设计高性能架构？" class="headerlink" title="如何设计高性能架构？"></a>如何设计高性能架构？</h1><h2 id="高性能复杂度模型"><a href="#高性能复杂度模型" class="headerlink" title="高性能复杂度模型"></a>高性能复杂度模型</h2><ol>
+<li>单机 <ul>
+<li>计算高性能：<ul>
+<li>进程模型：多进程、多线程</li>
+<li>网络模型：PPC&#x2F;TPC 常量连接、海量请求，Reactor 海量连接、海量请求</li>
+<li>缓存模型</li>
+</ul>
+</li>
+<li>存储高性能：存储模型</li>
+</ul>
+</li>
+<li>集群<ul>
+<li>计算高性能：任务分解、任务分配</li>
+<li>存储高性能：任务分解、任务分配</li>
+</ul>
+</li>
+</ol>
+
         </div></article>
       <article class="post">
     <header class="post-header">

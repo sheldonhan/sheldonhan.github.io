@@ -86,9 +86,26 @@
     <div class="post-toc" id="post-toc">
     <h2 class="post-toc-title">文章目录</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E9%AB%98%E6%80%A7%E8%83%BD%E6%9E%B6%E6%9E%84%EF%BC%9F"><span class="toc-text">如何设计高性能架构？</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E9%AB%98%E6%80%A7%E8%83%BD%E6%9E%B6%E6%9E%84%EF%BC%9F"><span class="toc-text">如何设计高性能架构？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E6%80%A7%E8%83%BD%E5%A4%8D%E6%9D%82%E5%BA%A6%E6%A8%A1%E5%9E%8B"><span class="toc-text">高性能复杂度模型</span></a></li></ol></li></ol>
     </div>
-  </div><div class="post-content"><h1 id="如何设计高性能架构？"><a href="#如何设计高性能架构？" class="headerlink" title="如何设计高性能架构？"></a>如何设计高性能架构？</h1>
+  </div><div class="post-content"><h1 id="如何设计高性能架构？"><a href="#如何设计高性能架构？" class="headerlink" title="如何设计高性能架构？"></a>如何设计高性能架构？</h1><h2 id="高性能复杂度模型"><a href="#高性能复杂度模型" class="headerlink" title="高性能复杂度模型"></a>高性能复杂度模型</h2><ol>
+<li>单机 <ul>
+<li>计算高性能：<ul>
+<li>进程模型：多进程、多线程</li>
+<li>网络模型：PPC&#x2F;TPC 常量连接、海量请求，Reactor 海量连接、海量请求</li>
+<li>缓存模型</li>
+</ul>
+</li>
+<li>存储高性能：存储模型</li>
+</ul>
+</li>
+<li>集群<ul>
+<li>计算高性能：任务分解、任务分配</li>
+<li>存储高性能：任务分解、任务分配</li>
+</ul>
+</li>
+</ol>
+
       </div>
       <div class="post-copyright">
     <p class="copyright-item">
