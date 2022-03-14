@@ -85,7 +85,26 @@
 
     <div class="post-content"><h1 id="如何设计高可用架构？"><a href="#如何设计高可用架构？" class="headerlink" title="如何设计高可用架构？"></a>如何设计高可用架构？</h1><h2 id="高可用复杂度模型"><a href="#高可用复杂度模型" class="headerlink" title="高可用复杂度模型"></a>高可用复杂度模型</h2><ol>
 <li>计算高可用<ul>
-<li>任务分配</li>
+<li>任务分配<ul>
+<li>将任务分配到多个服务器执行<ul>
+<li>任务分配器需要监控业务服务器的状态，在故障时进行切换</li>
+</ul>
+</li>
+<li>设计关键点<ul>
+<li>状态检测</li>
+<li>运行形态</li>
+<li>配置获取</li>
+<li>分配算法</li>
+</ul>
+</li>
+<li>案例<ul>
+<li>DNS</li>
+<li>NGINX</li>
+<li>MEMCache</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>任务分解</li>
 </ul>
 </li>
@@ -103,7 +122,11 @@
 </li>
 </ul>
 </li>
-<li>单机做不到高可用<h2 id="计算高可用"><a href="#计算高可用" class="headerlink" title="计算高可用"></a>计算高可用</h2></li>
+<li>单机做不到高可用，高可用方案必然是“集群”方案</li>
+<li>冗余法则<ul>
+<li>鸡蛋不要放到一个篮子里，集群<h2 id="计算高可用"><a href="#计算高可用" class="headerlink" title="计算高可用"></a>计算高可用</h2></li>
+</ul>
+</li>
 </ol>
 <h2 id="存储高可用"><a href="#存储高可用" class="headerlink" title="存储高可用"></a>存储高可用</h2>
         </div></article>
