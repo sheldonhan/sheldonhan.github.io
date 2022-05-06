@@ -192,7 +192,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-05 21:51:54" itemprop="dateModified" datetime="2022-05-05T21:51:54+08:00">2022-05-05</time>
+      <time title="修改时间：2022-05-05 22:00:04" itemprop="dateModified" datetime="2022-05-05T22:00:04+08:00">2022-05-05</time>
     </span>
 
   
@@ -255,9 +255,21 @@
 <li>存储高可用<ul>
 <li>数据复制<ul>
 <li>复制格式<ul>
-<li>命令</li>
-<li>数据</li>
-<li>文件</li>
+<li>命令<ul>
+<li>优缺点：1）实现简单，复制数据量小；2）数据可能不一致（SQL函数）</li>
+<li>适应场景：增量复制</li>
+</ul>
+</li>
+<li>数据<ul>
+<li>优缺点：1）实现简单；2）保证数据一致；3）复制流量可能会很大</li>
+<li>适应场景：增量复制</li>
+</ul>
+</li>
+<li>文件<ul>
+<li>优缺点：1）实现复杂，复制的时候数据在变；2）保证数据一致；3）复制流量可能会很大</li>
+<li>适应场景：全量复制</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>复制方式<ul>
@@ -275,6 +287,7 @@
 <li>民主式</li>
 </ul>
 </li>
+<li>排列组合共36种架构</li>
 </ul>
 </li>
 <li>单机做不到高可用，高可用方案必然是“集群”方案</li>
