@@ -192,7 +192,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-09 17:17:35" itemprop="dateModified" datetime="2022-05-09T17:17:35+08:00">2022-05-09</time>
+      <time title="修改时间：2022-05-09 17:37:13" itemprop="dateModified" datetime="2022-05-09T17:37:13+08:00">2022-05-09</time>
     </span>
 
   
@@ -316,8 +316,29 @@
 <li>应用场景：绝大部分业务都可以应用</li>
 </ul>
 </li>
-<li>协商式</li>
-<li>民主式</li>
+<li>协商式<ul>
+<li>优缺点：1）架构实现简单，决策逻辑简单；2）如果是链路问题会导致双主，可以用双通道来缓解；3）数据一致性弱</li>
+<li>应用场景：内部系统、网络设备（用串口相连）</li>
+</ul>
+</li>
+<li>民主式<ul>
+<li>优缺点：1）决策过程复杂，决策逻辑复杂，一般用标准算法进行选举，例如Raft、ZAB、Paxos；2）可用性最高，数据一致性最强；3）可能出现“脑裂”问题，可以采用quorum来控制</li>
+<li>应用场景：对数据一致性要求很高的场景，例如余额、库存</li>
+</ul>
+</li>
+<li>案例<ul>
+<li>独裁式案例<ul>
+<li>Redis：使用sentinel集群来解决“决策者”单点问题，sentinel又是通过Raft算法进行选举的</li>
+<li>Hadoop：使用ZooKeeper集群来解决“决策者”单点问题</li>
+</ul>
+</li>
+<li>民主式案例<ul>
+<li>ZooKeeper：基于ZAB算法选举</li>
+<li>MongoDB：3.2.0以前基于bully算法，3.2.0开始基于Raft算法</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>排列组合共36种架构</li>
@@ -325,11 +346,19 @@
 </li>
 <li>单机做不到高可用，高可用方案必然是“集群”方案</li>
 <li>冗余法则<ul>
-<li>鸡蛋不要放到一个篮子里，集群<h2 id="计算高可用"><a href="#计算高可用" class="headerlink" title="计算高可用"></a>计算高可用</h2></li>
+<li>鸡蛋不要放到一个篮子里，集群<h2 id="随堂测验"><a href="#随堂测验" class="headerlink" title="随堂测验"></a>随堂测验</h2></li>
 </ul>
 </li>
 </ol>
-<h2 id="存储高可用"><a href="#存储高可用" class="headerlink" title="存储高可用"></a>存储高可用</h2>
+<ul>
+<li>判断题<ol>
+<li>高可用架构的本质是通过“冗余”来应对可能的故障</li>
+<li>高可用架构</li>
+</ol>
+</li>
+<li>思考题</li>
+</ul>
+
       
     </div>
 
